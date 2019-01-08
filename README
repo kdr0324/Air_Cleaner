@@ -1,0 +1,27 @@
+#Air_Cleaner
+
+Hi, My name is Dae Ryong Kim in Seoul Korea.
+
+I Will Make Air Cleaner using raspberry pi 3
+
+first i use temperature, humidity and dust sensor for checking air condition.
+
+If dust density is higher than threshold, cooling fan(connected raspberry pi) is going to work.
+
+And periodically air condition information will be writed on MySQL Server (in raspberry pi)
+
+The information writed DB Sever can read web service. I use node.js for web service.
+
+And this system can remote control through Android Application.
+
+I want addition function in this Android App like voic recognition.
+
+Thank you
+
+
+
+
+
+
+
+
