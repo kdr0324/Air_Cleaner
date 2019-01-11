@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#define MAX_TIME 81
+#define MAX_TIME 83
 #define DHT11PIN 7
 
 extern int dht11_val[5];

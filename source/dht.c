@@ -12,6 +12,10 @@ int read_dht_val(void)
 
 	int wiringPi = wiringPiSetup();
 
+	for(i=0; i<5; i++){
+		dht11_val[i]=0;
+	}
+
 	pinMode(DHT11PIN, OUTPUT);
        	digitalWrite(DHT11PIN, LOW);
        	delay(18);
@@ -30,7 +34,7 @@ int read_dht_val(void)
 		}
 		if(counter==255) break;
 		laststate = 1-laststate;
-		if((i>=2) && (i%2 == 0)) {
+		if((i>=4) && (i%2 == 0)) {
 			dht11_val[j/8] <<= 1;
 			if(counter > 30)
 				dht11_val[j/8]|=1;
@@ -47,7 +51,7 @@ int read_dht_val(void)
 		if((dht11_val[0] == 0) && (dht11_val[2]==0))
 			return 0;
 
-		//printf("temp=%lf*c, humidity=%lf\%\n", t, h);
+		printf("temp=%lf*c, humidity=%lf\%\n", t, h);
 		return 1;
 	}
 
