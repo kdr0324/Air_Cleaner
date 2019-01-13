@@ -1,7 +1,7 @@
 #include "dht.h"
 
-//int dht11_val[5] = {0,0,0,0,0};
-//float t, h;
+int dht11_val[5];
+float t, h;
 
 int read_dht_val(void)
 {

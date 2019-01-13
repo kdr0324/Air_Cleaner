@@ -2,8 +2,6 @@
 #include "dht.h"
 #include "sql.h"
 
-int dht11_val[5];
-float t, h;
 
 void INThandler(int sig)
 {
