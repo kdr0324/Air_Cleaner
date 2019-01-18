@@ -12,7 +12,7 @@ int connect_sql(){
 	return 1;
 }
 
-int insert_query(float t, float h)
+int insert_query(float t, float h, float pm1_0, float pm2_5, float pm10)
 {
 	char query[255];
 	char _time[32];
@@ -25,7 +25,7 @@ int insert_query(float t, float h)
 	
 	sprintf(_time, "%d-%02d-%02d %02d:%02d:%02d", ptm->tm_year+1900, ptm->tm_mon+1, ptm->tm_mday,
 		ptm->tm_hour, ptm->tm_min, ptm->tm_sec);
-	sprintf(query, "INSERT INTO weather VALUES('%s', '%lf', '%lf')", _time, t, h);
+	sprintf(query, "INSERT INTO weather VALUES('%s', '%lf', '%lf', '%lf', '%lf', '%lf')", _time, t, h, pm1_0, pm2_5, pm10);
 
 	if( mysql_query(conn, query))
 	{

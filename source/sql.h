@@ -19,7 +19,7 @@ MYSQL_ROW row;
 
 int connect_sql();
 int disconnect_sql();
-int insert_query(float temperature, float humidity);
+int insert_query(float temperature, float humidity, float pm1_0, float pm2_5, float pm10);
 void finish_with_error();
 
 
