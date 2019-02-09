@@ -2,6 +2,7 @@ CC = gcc
 
 airChecker : dht.o main.o pms.o sql.o
 	gcc -o airChecker dht.o main.o pms.o sql.o -lwiringPi -lmariadbclient
+	rm *.o
 
 dht.o : dht.c
 	gcc -c -o dht.o dht.c -lwiringPi

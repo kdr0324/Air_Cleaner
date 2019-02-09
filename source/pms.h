@@ -1,6 +1,7 @@
 #ifndef _pms_h_
 #define _pms_h_
 
+//global variable in pms.c
 extern unsigned char pms[32];
 extern int PM1_0, PM2_5, PM10;
 
@@ -12,11 +13,16 @@ extern int PM1_0, PM2_5, PM10;
 #include <wiringPi.h>
 #include <wiringSerial.h>
 
-
+//open pms sensor for UART Seiral connect
 int open_pms();
+
+//read data from pms sensor
 int read_pms();
+
+//close pms sensor for UART Seiral disconnect
 int close_pms();
 
+//struct for get data from pms sensor
 typedef struct {
     char     deviceType[32];
     uint8_t  frameHeader[2];
